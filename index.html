@@ -694,14 +694,14 @@ footer{border-top:1px solid var(--line);padding:52px 0 28px;background:var(--bg-
 .foot-bottom{max-width:1180px;margin:36px auto 0;padding:20px 24px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--muted-2);font-size:13px}
 
 /* ---------- toast / modal shared ---------- */
-.toast{position:fixed;top:-2cm;left:50%;transform:translateX(-50%);width:5cm;height:1.5cm;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:0 14px;border-radius:999px;font-size:12.5px;line-height:1.2;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap;box-shadow:var(--shadow);z-index:999;max-width:92vw;transition:top .28s cubic-bezier(.34,1.56,.64,1),width .22s ease}
+.toast{position:fixed;top:-2cm;left:50%;transform:translateX(-50%);width:1cm;height:1.5cm;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:0 14px;border-radius:999px;font-size:12.5px;line-height:1.2;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap;box-shadow:var(--shadow);z-index:999;max-width:92vw;transition:top .28s cubic-bezier(.34,1.56,.64,1),width .22s ease}
 /* Stage 1 (.show): drop straight down from off-screen to 1cm below the
    top edge, staying a 1cm circle the whole way. */
 .toast.show{top:1cm;transition:top .28s cubic-bezier(.34,1.56,.64,1)}
 /* Stage 2 (.expand, added once the drop finishes): the circle widens
    left+right into the full 4cm pill — width transition is deliberately
    NOT delayed here since JS times the class add to fire after stage 1. */
-.toast.show.expand{width:4cm;transition:width .22s ease}
+.toast.show.expand{width:6cm;transition:width .22s ease}
 .modal-overlay{position:fixed;inset:0;background:rgba(6,10,20,.6);visibility:hidden;pointer-events:none;display:flex;align-items:flex-start;justify-content:center;z-index:1300;padding:20px;opacity:0;transition:opacity .25s ease,visibility 0s linear .25s;overflow-y:auto}
 .modal-overlay.open{visibility:visible;pointer-events:auto;opacity:1;transition:opacity .25s ease,visibility 0s linear}
 .modal{

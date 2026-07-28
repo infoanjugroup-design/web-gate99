@@ -703,9 +703,12 @@ footer{border-top:1px solid var(--line);padding:52px 0 28px;background:var(--bg-
    NOT delayed here since JS times the class add to fire after stage 1. */
 .toast.show.expand{width:8.5cm;transition:width .22s ease}/* टोस्ट के अंदर के टेक्स्ट की चौड़ाई कम करने के लिए */
 .toast p {
-    max-width: 60%; /* चौड़ाई को कम करके 80% या अपनी पसंद के अनुसार सेट करें */
-    margin: 0 auto; /* टेक्स्ट को बीच में (center) रखने के लिए */
+    max-width: 70%; /* पहले से मौजूद है */
+    margin: 0 auto; /* पहले से मौजूद है */
+    word-break: break-word; /* लंबे शब्दों को बीच से तोड़कर अगली लाइन में लाएगा */
+    overflow-wrap: break-word; /* नए ब्राउज़र्स के लिए सुरक्षित तरीका */
 }
+
 
 .modal-overlay{position:fixed;inset:0;background:black;visibility:hidden;pointer-events:none;display:flex;align-items:flex-start;justify-content:center;z-index:1300;padding:20px;opacity:0;transition:opacity .25s ease,visibility 0s linear .25s;overflow-y:auto}
 .modal-overlay.open{visibility:visible;pointer-events:auto;opacity:1;transition:opacity .25s ease,visibility 0s linear}

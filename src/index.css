@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply bg-ink text-paper font-body antialiased; }
+  h1, h2, h3, .font-display { @apply font-display; }
+  :focus-visible { outline: 2px solid theme('colors.signal'); outline-offset: 2px; }
+}
+
+@layer components {
+  .blueprint-panel {
+    @apply relative bg-graphite/60 border border-blueline/30 rounded-sm;
+  }
+  .blueprint-panel::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none bg-blueprint bg-grid opacity-40 rounded-sm;
+  }
+  .reg-mark {
+    @apply absolute w-3 h-3 border-blueline/60;
+  }
+  .btn-signal {
+    @apply inline-flex items-center justify-center gap-2 bg-signal text-ink font-display font-bold
+           px-5 py-2.5 rounded-sm hover:brightness-110 active:brightness-95 transition
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border border-blueline/50 text-paper/90
+           font-display px-5 py-2.5 rounded-sm hover:bg-blueline/10 transition;
+  }
+  .field {
+    @apply w-full bg-ink/60 border border-blueline/40 rounded-sm px-3 py-2 text-paper
+           placeholder:text-paper/40 focus:border-signal transition;
+  }
+  .label-mono {
+    @apply font-mono text-xs uppercase tracking-widest text-blueline;
+  }
+}

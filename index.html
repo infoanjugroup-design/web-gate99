@@ -701,8 +701,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 28px;background:var(--bg-
 /* Stage 2 (.expand, added once the drop finishes): the circle widens
    left+right into the full 4cm pill — width transition is deliberately
    NOT delayed here since JS times the class add to fire after stage 1. */
-.toast.show.expand{width:6cm;transition:width .22s ease}
-.modal-overlay{position:fixed;inset:0;background:rgba(6,10,20,.6);visibility:hidden;pointer-events:none;display:flex;align-items:flex-start;justify-content:center;z-index:1300;padding:20px;opacity:0;transition:opacity .25s ease,visibility 0s linear .25s;overflow-y:auto}
+.toast.show.expand{width:8cm;transition:width .22s ease}
+.modal-overlay{position:fixed;inset:0;background:black;visibility:hidden;pointer-events:none;display:flex;align-items:flex-start;justify-content:center;z-index:1300;padding:20px;opacity:0;transition:opacity .25s ease,visibility 0s linear .25s;overflow-y:auto}
 .modal-overlay.open{visibility:visible;pointer-events:auto;opacity:1;transition:opacity .25s ease,visibility 0s linear}
 .modal{
   background:#000;border:1px solid var(--line);border-radius:16px;padding:26px;max-width:380px;width:100%;box-shadow:var(--shadow);

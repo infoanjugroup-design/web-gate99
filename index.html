@@ -697,7 +697,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 28px;background:var(--bg-
 .toast{position:fixed;top:-2cm;left:50%;transform:translateX(-50%);width:1cm;height:1.5cm;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:0 14px;border-radius:999px;font-size:12.5px;line-height:1.2;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap;box-shadow:var(--shadow);z-index:999;max-width:92vw;transition:top .28s cubic-bezier(.34,1.56,.64,1),width .22s ease}
 /* Stage 1 (.show): drop straight down from off-screen to 1cm below the
    top edge, staying a 1cm circle the whole way. */
-.toast.show{top:1cm;transition:top .28s cubic-bezier(.34,1.56,.64,1.5)}
+.toast.show{top:1cm;transition:top .28s cubic-bezier(.34,1.56,.64,1)}
 /* Stage 2 (.expand, added once the drop finishes): the circle widens
    left+right into the full 4cm pill — width transition is deliberately
    NOT delayed here since JS times the class add to fire after stage 1. */

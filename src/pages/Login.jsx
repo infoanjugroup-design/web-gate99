@@ -71,7 +71,7 @@ export default function Login() {
               <label className="label-mono block mb-1.5">6-digit code</label>
               <input
                 className="field font-mono tracking-[0.4em] text-center text-lg" required
-                value={otp} onChange={(e) => setOtp(e.target.value)} maxLength={6} inputMode="numeric"
+                value={otp} onChange={(e) => setOtp(e.target.value)} maxLength={8} inputMode="numeric"
               />
             </div>
             <button disabled={busy} className="btn-signal w-full">{busy ? 'Verifying…' : 'Verify & continue'}</button>

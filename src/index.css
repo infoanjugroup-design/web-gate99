@@ -5,7 +5,7 @@
 @layer base {
   html, body, #root { height: 100%; }
   body { @apply bg-ink text-paper font-body antialiased; }
-  h1, h2, h3, .font-display { @apply font-display; }
+  h1, h2, h3 { @apply font-display; }
   :focus-visible { outline: 2px solid theme('colors.signal'); outline-offset: 2px; }
 }
 
